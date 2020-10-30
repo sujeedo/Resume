@@ -1,0 +1,96 @@
+/* Font Embedded */
+@font-face {
+  font-family: 'paybooc-Medium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'paybooc-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NEXONFootballGothicLA1';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXONFootballGothicLA1.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NEXONFootballGothicBA1';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXONFootballGothicBA1.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+   /* Color */
+   --color-white: #ffffff;
+   --color-dark-white: #f1f1f3;
+   --color-light-grey: #bfbfbf;
+   --color-grey: #8b8b8b;
+   --color-dark-grey: #666666;
+   --color-black: #000000;
+   --color-mint: #28c6a2;
+   --color-yellow: #fffb87;
+   --color-powder-red: #e57a7a;
+   --color-powder-orange: #ffbe97;
+   --color-powder-blue: #89b8ce;
+   --color-powder-yellow: #d6cd8b;
+   --color-powder-puple: #94a4bd;
+   --color-powder-mint: #4dc2a5;
+ 
+   /* Font size */
+   --font-large: 30px;
+   --font-medium: 20px;
+   --font-regular: 14px;
+   --font-small: 12px;
+   --font-micro: 10px;
+}
+
+/* CSS Reset */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,
+blockquote,pre,abbr,address,cite,code,del,dfn,em,img,
+ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,footer,header,hgroup,
+menu,nav,section,summary,time,mark,audio,video {margin: 0; padding: 0;}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+
+ul, ol ,li {list-style: none;}
+img,fieldset,iframe,abbr,button {border: 0;}
+table {border-spacing: 0; border: 0;}
+table img {vertical-align: middle;}
+img {vertical-align: middle; border: 0; padding: 0;}
+li img, dd img {vertical-align: top; }
+input, select, textarea, button  {font-size: 100%; vertical-align: middle; color: var(--color-dark-grey); font-size: var(--font-regular); letter-spacing: -0.5px;}
+address, caption, cite, code, em {font-style: normal; font-weight: normal;}
+caption, legend {visibility: hidden; width: 0; height: 0; line-height: 0; font-size: 0; overflow: hidden;}
+button {cursor: pointer; background: none; color:var(--color-dark-grey)}
+h1,h2,h3,h4,h5,h6 {font-size: 100%;}
+address,strong {font-style: normal; font-weight: normal;}
+
+/* Universal tags */
+* {box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;}
+html {width: 100%; height: 100%; overflow-y: scroll; overflow-x: none;}
+body {
+  width: 100%; height: 100%;
+  position: relative; display: inline-block;
+  margin:0 auto; letter-spacing: -0.5px;
+  font-size: var(--font-regular); font-family: 'paybooc-Medium'; color:var(--color-dark-grey);
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+.logo { font-family: 'NEXONFootballGothicBA1'; }
+.fw_bold { font-weight: bolder;}
+.fw_light { font-weight: lighter;}
+
+/* Link Style */
+a {text-decoration:none; color:var(--color-dark-grey)}
+
+/* Common Class*/
+.hidden_text {overflow: hidden; position: absolute; width: 0; height: 0; text-indent: 9999; z-index: -1;}
+
