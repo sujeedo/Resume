@@ -38,15 +38,25 @@
    --color-powder-orange: #ffbe97;
    --color-powder-blue: #89b8ce;
    --color-powder-yellow: #d6cd8b;
-   --color-powder-puple: #94a4bd;
+   --color-powder-purple: #94a4bd;
    --color-powder-mint: #4dc2a5;
- 
+
    /* Font size */
-   --font-large: 30px;
-   --font-medium: 20px;
-   --font-regular: 14px;
-   --font-small: 12px;
-   --font-micro: 10px;
+   --font-Xlarge: 40px;
+   --font-large: 35px;
+   --font-tall: 25px;
+   --font-medium: 22px;
+   --font-small-medium: 18px;
+   --font-regular: 12px;
+   --font-small: 10px;
+   --font-micro: 8px;
+
+   /* Layout Interval */
+   --margin-base: 15px;
+   --padding-base: 15px;
+
+   /* etc */
+   --etc-base: 15px;
 }
 
 /* CSS Reset */
@@ -72,25 +82,45 @@ button {cursor: pointer; background: none; color:var(--color-dark-grey)}
 h1,h2,h3,h4,h5,h6 {font-size: 100%;}
 address,strong {font-style: normal; font-weight: normal;}
 
-/* Universal tags */
-* {box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;}
-html {width: 100%; height: 100%; overflow-y: scroll; overflow-x: none;}
-body {
-  width: 100%; height: 100%;
-  position: relative; display: inline-block;
-  margin:0 auto; letter-spacing: -0.5px;
-  font-size: var(--font-regular); font-family: 'paybooc-Medium'; color:var(--color-dark-grey);
-  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
-}
+/* Universal tag */
+* {text-align: center; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;}
+html {width: 100%; height: 100%;}
+body {position: relative; display: inline-block; width: 100%; height: 100%; margin:0 auto; font-size: var(--font-regular); font-family: 'paybooc-Medium'; line-height: var(--font-small-medium); letter-spacing: -0.5px; color:var(--color-dark-grey);}
+a {display: flex; justify-content: center; align-items: center; text-decoration:none; color:var(--color-dark-grey)}
 
-/* Typography */
-.logo { font-family: 'NEXONFootballGothicBA1'; }
-.fw_bold { font-weight: bolder;}
-.fw_light { font-weight: lighter;}
+/* Common Layout */
+.whole_container {display: flex; flex-direction: column; justify-content: center; align-items: center; min-width: 280px;}
+section {width: 100%; margin: var(--margin-base);}
 
-/* Link Style */
-a {text-decoration:none; color:var(--color-dark-grey)}
-
-/* Common Class*/
+/* Common Text */
+.fw_bold {font-weight: bolder;}
+.fw_light {font-weight: lighter;}
 .hidden_text {overflow: hidden; position: absolute; width: 0; height: 0; text-indent: 9999; z-index: -1;}
 
+/* Logo Style */
+.logo {font-size: var(--font-large); font-weight: normal; font-family: 'NEXONFootballGothicBA1';}
+.logo a {width: calc(var(--font-large)*7); height: var(--font-large);}
+.logo span:nth-child(1) {color: var(--color-powder-red);}
+.logo span:nth-child(3) {color: var(--color-powder-orange);}
+.logo span:nth-child(5) {color: var(--color-powder-blue);}
+.logo span:nth-child(7) {color: var(--color-powder-yellow);}
+.logo span:nth-child(9) {color: var(--color-powder-purple);}
+.logo span:nth-child(11) {color: var(--color-powder-mint);}
+.logo span:nth-child(3), .logo span:nth-child(9) {margin-right: 8px;}
+
+/* Skip Menu Style */
+.skip_menu {position: absolute; top: 0; transform: translateY(-100%);}
+.skip_menu:focus {width: 100%; padding: var(--padding-base); background: var(--color-white); transform: translateY(0); transition: .5s;}
+
+/* Header Style */
+header {margin: var(--margin-base) 0;}
+header .logo {margin-top: var(--font-small-medium);}
+header p {margin-top: var(--font-small);}
+
+/* GNB Style */
+.gnb {position: sticky; top: 0; width: 100%; height: 40px; background: linear-gradient(90deg, var(--color-yellow) -25%, var(--color-mint) 50%, var(--color-yellow) 125%); z-index: 1;}
+.gnb ul {display: flex; justify-content: space-evenly; align-items: center; width: 100%;}
+.gnb ul li a {width: 46px; height: 40px; font-size: var(--font-medium); color: var(--color-white);}
+.gnb ul li:nth-child(4) i, .gnb ul li:nth-child(5) i {font-size: var(--font-tall);}
+.gnb ul li:nth-child(4) i {margin-top: -2px;}
+.gnb ul li:nth-child(5) i {margin-top: 2px; margin-right: -2px;}
