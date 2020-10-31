@@ -23,7 +23,9 @@
 .project_list a {width: 80px; height: 28px; margin: 0 auto; border: 1px solid var(--color-light-grey); border-radius: 20px;}
 
 /* Home Footer */
-footer {display: flex; flex-direction: column; width: 100%; border-top-left-radius: 50px; border-top-right-radius: 50px;}
+footer {display: flex; flex-direction: column; position: relative; width: 100%;}
+footer::after {display: none; content: ""; position: absolute; top: 0; width: 100%; height: calc(var(--font-large)*4); border-top-left-radius: 50%; border-top-right-radius: 50%; background: var(--color-dark-white); z-index: -1;}
+footer::before {display: none; content: ""; position: absolute; bottom: 0; width: 100%; height: calc(100% - (var(--font-large)*4)); background: var(--color-dark-white); z-index: -1;}
 footer h2 {margin-bottom: var(--font-micro);}
 .notification, .menu_info, address, .copyright {background: var(--color-dark-white);}
 .notification {padding: var(--font-Xlarge) 0 var(--font-medium) 0; border-top-left-radius: 50%; border-top-right-radius: 50%;}
@@ -31,9 +33,8 @@ footer h2 {margin-bottom: var(--font-micro);}
 .notification .favicon {width: var(--font-medium); height: var(--font-medium); margin-top: -1px; background: url(../img/favicon.png) center / contain no-repeat;}
 .notification .logo {font-size: var(--font-medium);}
 .notification .logo a {width: calc(var(--font-medium)*7); height: var(--font-medium);}
-.menu_info {text-align: left;}
 address {padding: var(--padding-base) 0;}
-.copyright {padding: var(--padding-base) 0; border-top: 1px solid var(--color-light-grey);}
+.copyright {width: 100%; padding: var(--padding-base) 0; border-top: 1px solid var(--color-light-grey);}
 
 /* @media start */
 @media screen and (min-width: 400px) {
@@ -41,7 +42,26 @@ address {padding: var(--padding-base) 0;}
   .project_list {width: calc(50%); padding: var(--padding-base);}
 }
 
+@media screen and (min-width: 550px) {
+  footer::after, footer::before {display: block;}
+  .notification, .menu_info, address, .copyright {background: none}
+}
 /* @media start 아이패드 이상 적용 */
 @media screen and (min-width: 768px) {
-  .project_list {width: calc(25%);}
+  .project_list {width: 25%;}
+  footer {flex-direction: row; flex-wrap: wrap;}
+  footer h2, .menu_info p, address {text-align: left;}
+  .notification {width: 100%; padding-bottom: 0;}
+  .menu_info {display: flex; flex-direction: row; flex-wrap: wrap; position: relative; width: calc((100%/3)*2); padding: var(--padding-base) 0;}
+  .menu_info h2 {width: 100%; color:}
+  .menu_info h2::after {display: flex; justify-content: center; width: 50%; content: "Menu Info :레이아웃 맞추기 위한 용도로 삽입."; color: var(--color-dark-grey);}
+  .menu_info h2::before {display: block; content: ""; position: absolute; right: 50%; width: 34%; height: var(--font-small-medium); background: var(--color-dark-white);}
+  .menu_info div {display: flex; justify-content: center; width: 50%;}
+  address {display: flex; justify-content: center; width: calc(100%/3);}
+  address>span {display: inline-block; text-align: left;}
+}
+
+@media screen and (min-width: 1200px) {
+  .notification p {text-align: left;}
+  .notification h2 {justify-content: start;}
 }
