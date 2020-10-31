@@ -120,7 +120,7 @@ header p {margin-top: var(--size-small);}
 .gnb {display: flex; align-items: center; position: sticky; top: 0; width: 100%; height: 40px; background: linear-gradient(90deg, var(--color-yellow) -25%, var(--color-mint) 50%, var(--color-yellow) 125%); z-index: 1;}
 .gnb ul {display: flex; justify-content: space-evenly; align-items: center; width: 100%;}
 .gnb ul li a {position: relative; width: 46px; height: 40px; font-size: var(--size-big-regular); color: var(--color-white);}
-.gnb ul li a::after {display: none; content: "Home"; position: absolute; bottom: -33px; padding: 5px 10px; border-radius: 5px; background: var(--color-white); color: var(--color-mint);}
+.gnb ul li a::after {display: none; content: "Home"; position: absolute; bottom: -33px; padding: 5px 10px; font-size: var(--size-regular); border-radius: 5px; background: var(--color-white); color: var(--color-mint);}
 .gnb ul li a::before {display: none; content: "▲"; position: absolute; bottom: -10px; font-size: var(--size-medium);}
 .gnb ul li i {font-size: var(--size-medium);}
 .gnb ul li:nth-child(4) i, .gnb ul li:nth-child(5) i {font-size: var(--size-small-tall);}
@@ -168,7 +168,9 @@ footer::before {display: block; content: ""; position: absolute; bottom: 0; widt
   .gnb ul li:nth-of-type(3):hover a::after {content: ""; transform: scale(1);}
   .gnb ul li:nth-of-type(4):hover a::after {content: ""; transform: scale(1);}
   .gnb ul li:nth-of-type(5):hover a::after {content: ""; transform: scale(1);}
-  .gnb ul li:nth-of-type(6):hover a::after {content: ""; transform: scale(1);}
+  .gnb ul li:nth-of-type(6):hover a::after {content: "";}
+  .gnb ul li:nth-of-type(6):hover a {background: var(--color-white); color: var(--color-mint);}
+  .gnb ul li:nth-of-type(6):active a {transform: scale(0.96);}
   .gnb ul li:hover a::before {display: none;}
   .contact_list {flex-direction: row;}
 }
