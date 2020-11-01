@@ -1,13 +1,20 @@
 /* Home banner */
 .greeting {margin-top: 0;}
-.banner {position: relative; position: -webkit-sticky; width: 100%; height: 290px;}
+.banner {position: relative; position: -webkit-sticky; width: 100%; min-height: 270px; height: 35vw;}
 .banner_container {position: relative;}
-.banner_list {position: absolute; width: 100%; height: 250px; background: url(../img/home_bg_01.png) center / cover no-repeat;}
-.banner button {position: absolute; bottom: 0; width: calc(100% / 4); height: 40px; font-size: var(--size-medium); background: linear-gradient(90deg, var(--color-light-grey) -200%, var(--color-grey) 100%); color: var(--color-white);}
-.banner_Prev_btn {left: 0;}
-.banner_next_btn {left: 25%;}
-.banner_play_btn {right: 25%;}
-.banner_stop_btn {right: 0;}
+.banner_list {position: absolute; width: 100%; min-height: 240px; height: 35vw;}
+.banner_list:nth-of-type(1) {background: url(../img/home_bg_01.png) bottom / cover no-repeat;}
+.banner_list:nth-of-type(2) {background: url(../img/home_bg_02.png) bottom / cover no-repeat;}
+.banner_list:nth-of-type(3) {background: url(../img/home_bg_03.png) bottom / cover no-repeat;}
+.banner_list.none {display: none;}
+.banner button {position: absolute; font-size: var(--size-medium); background: linear-gradient(90deg, var(--color-light-grey) -200%, var(--color-grey) 100%); color: var(--color-white);}
+.banner_Prev_btn {bottom: 0; left: 0; width: calc(100% / 4); height: 40px;}
+.banner_next_btn {bottom: 0; left: 25%; width: calc(100% / 4); height: 40px;}
+.banner_play_btn {bottom: 0; right: 25%; width: calc(100% / 4); height: 40px;}
+.banner_stop_btn {bottom: 0; right: 0; width: calc(100% / 4); height: 40px;}
+.paginaition {display: flex; justify-content: center; position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);}
+.paginaition li {width: 10px; height: 10px; margin: 10px 5px; background: var(--color-white); border-radius: 50%;}
+.paginaition li.active {background: var(--color-mint);}
 
 /* Home Project */
 .project h2 {font-size: var(--size-small-medium);}
@@ -20,7 +27,10 @@
 .project_list:nth-child(3) .project_preview_img {background: url(../img/project_img_03.png) center / cover no-repeat;}
 .project_list:nth-child(4) .project_preview_img {background: url(../img/project_img_04.png) center / cover no-repeat;}
 .project_title {margin: var(--base-15);}
-.project_list a {width: 60%; height: var(--size-tall); margin: 0 auto; font-size: var(--size-small); border: 1px solid var(--color-light-grey); border-radius: 20px; color: var(--color-grey)}
+.project_list a {position: relative; width: 60%; height: var(--size-tall); margin: 0 auto; font-size: var(--size-small); border: 1px solid var(--color-light-grey); border-radius: 20px; color: var(--color-grey)}
+.project_list a::before {display: block; content: ""; position: absolute; width: 100%; height: 100%; border-radius: 20px; background-color: var(--color-mint); transform: scale(0); transition: transform .2s; z-index: -1;}
+.project_list a:hover {color: var(--color-white);}
+.project_list a:hover::before {transform: scale(1);}
 .project_list .fw_light {display: block;}
 
 /* @media start */
@@ -30,8 +40,19 @@
 }
 @media screen and (min-width: 800px) {
   .project_list {width: 25%;}
-  
 }
 @media screen and (min-width: 1200px) {
   .project_title {margin-bottom: 15px;}
+  .banner button {background: transparent; color: var(--color-black); transition: opacity .3s; opacity: 0;}
+  .banner:hover button {opacity: 1;}
+  .banner button:focus {opacity: 1;}
+  .banner_Prev_btn {bottom: 50%; transform: translateY(50%); left: 0px; width: 120px; height: 100%;}
+  .banner_next_btn {bottom: 50%; transform: translateY(50%); left: calc(100% - 120px); width: 120px; height: 100%;}
+  .banner_Prev_btn:hover {background: linear-gradient(90deg, var(--color-white), transparent); color: var(--color-mint);} 
+  .banner_next_btn:hover {background: linear-gradient(90deg, transparent, var(--color-white)); color: var(--color-mint);}
+  .banner_play_btn {display: none; bottom: 4.5%; left: 62%; transform: translateY(50%) translateX(50%); width: 40px;}
+  .banner_stop_btn {bottom: 4.5%; left: 62%; transform: translateY(50%) translateX(50%); width: 40px;}
+  .banner_play_btn:hover, .banner_stop_btn:hover {color: var(--color-mint);}
+  .paginaition {bottom: 4%; left: 50%; transform: translateY(-50% 50%); width: 100%;}
+  .paginaition li {width: calc(100%/12); height: 2px; margin: 0px 5px; border-radius: 2px; background: var(--color-grey);}
 }

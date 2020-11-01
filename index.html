@@ -12,6 +12,7 @@
   <link type="text/css" rel="stylesheet" href="./css/common.css">
   <link type="text/css" rel="stylesheet" href="./css/loading.css">
   <link type="text/css" rel="stylesheet" href="./css/index.css">
+  <script src="./js/index.js" defer></script>
 </head>
 <body>
   <div class="whole_container">
@@ -48,13 +49,17 @@
     <section class="greeting">
       <h2 class="hidden_text">인사말</h2>
       <p class="hidden_text">안녕하세요! 웹 퍼블리셔 김경미입니다. 방문해주셔서 감사합니다.</p>
-      <div class="banner" aria-hidden="true">
+      <div class="banner">
         <ul class="banner_list_container">
           <li class="banner_list"></li>
-          <li class="banner_list"></li>
-          <li class="banner_list"></li>
+          <li class="banner_list none"></li>
+          <li class="banner_list none"></li>
         </ul>
-        <ul class="paginaition"></ul>
+        <ul class="paginaition">
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+        </ul>
         <button type="button" class="banner_Prev_btn" title="previous"><i class="fas fa-chevron-left"><span class="hidden_text">이전</span></i></button>
         <button type="button" class="banner_next_btn" title="next"><i class="fas fa-chevron-right"><span class="hidden_text">다음</span></i></button>
         <button type="button" class="banner_play_btn" title="play"><i class="far fa-play-circle"><span class="hidden_text">재생</span></i></button>
