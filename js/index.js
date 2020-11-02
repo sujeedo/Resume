@@ -59,7 +59,7 @@ function startAutoSlide() {
     let nextIndex = (currentIndex + 1) % slideCount;
     goToSlide(nextIndex);
     pagePainting()
-  }, 4000);
+  }, 10000);
 }
 startAutoSlide();
 pagePainting();
@@ -70,7 +70,7 @@ let activePagerBtn = document.querySelector('.paginaition .active span');
 activePagerBtn.animate([
   { width: '0%' },
   { width: '100%' }
-], 4000);
+], 10000);
 }
 
 function pagePaintingStop() {
@@ -78,7 +78,7 @@ function pagePaintingStop() {
   activePagerBtn.animate([
     { width: '100%' },
     { width: '100%' }
-  ], 4000);
+  ], 10000);
   }
 
 const stopSlideBtn = document.querySelector('.banner_stop_btn');

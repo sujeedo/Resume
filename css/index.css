@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'KCC-eunyoung';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KCC-eunyoung-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Home banner */
 .greeting {margin-top: 0;}
 .banner {position: relative; position: -webkit-sticky; width: 100%; min-height: 270px; height: 35vw;}
@@ -19,6 +26,12 @@
 .paginaition li {width: 10px; height: 10px; margin: 10px 5px; background: var(--color-white); border-radius: 50%;}
 .paginaition li.active {background: var(--color-mint);}
 .paginaition li.active span {display: none}
+
+/* Home Greeting Typing */
+.greeting_text_container {display: flex; flex-direction: column; justify-content: center; align-items: center; position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%); min-width: 238px; min-height: 134px; width: 34.8vw; height: 19.2vw; background: linear-gradient(130deg, #fffb87c0, #28c6a1d8);}
+.greeting_text_container p {display: flex; align-items: center; font-size: var(--size-medium); height: var(--size-medium); margin: 5px; color: var(--color-white); font-family: 'KCC-eunyoung';}
+.greeting_text_container p.cursor {animation: cursor 0.4s infinite;}
+@keyframes cursor{0%{border-right: 1px solid transparent} 50%{border-right: 1px solid var(--color-white)} 100%{border-right: 1px solid transparent}}
 
 /* Home Project */
 .project h2 {font-size: var(--size-small-medium);}
@@ -42,21 +55,27 @@
   .project_list_container {flex-direction: row; flex-wrap: wrap; padding: 0 var(--base-15);}
   .project_list {width: 50%; padding: var(--base-15);}
 }
-@media screen and (min-width: 800px) {
+
+@media screen and (min-width: 768px) {
   .project_list {width: 25%;}
+  .greeting_text_container {top: 39.8%; width: 34.8vw; height: 19.2vw;}
+  .greeting_text_container p {font-size: 2.5vw; height: 2.5vw; margin: calc(1vw + 2px);}
+  @keyframes cursor{0%{border-right: 2px solid transparent} 50%{border-right: 2px solid var(--color-white)} 100%{border-right: 2px solid transparent}}
 }
+
 @media screen and (min-width: 1200px) {
   .project_title {margin-bottom: 15px;}
-  .banner button {background: transparent; color: var(--color-black); transition: opacity .3s; opacity: 0;}
+  .banner button {background: transparent; color: var(--color-black); transition: opacity .3s; opacity: 0; outline: none;}
   .banner:hover button {opacity: 1;}
   .banner button:focus {opacity: 1;}
   .banner_prev_btn {bottom: 50%; transform: translateY(50%); left: 0px; width: 120px; height: 100%;}
   .banner_next_btn {bottom: 50%; transform: translateY(50%); left: calc(100% - 120px); width: 120px; height: 100%;}
-  .banner_prev_btn:hover {background: linear-gradient(90deg, var(--color-white), transparent); color: var(--color-mint);} 
-  .banner_next_btn:hover {background: linear-gradient(90deg, transparent, var(--color-white)); color: var(--color-mint);}
+  .banner_prev_btn:hover, .banner_prev_btn:focus {background: linear-gradient(90deg, var(--color-white), transparent); color: var(--color-mint);} 
+  .banner_next_btn:hover, .banner_next_btn:focus {background: linear-gradient(90deg, transparent, var(--color-white)); color: var(--color-mint);}
   .banner_play_btn {bottom: 4.5%; left: 62%; transform: translateY(50%) translateX(50%); width: 40px;}
   .banner_stop_btn {bottom: 4.5%; left: calc(62% + 32px); transform: translateY(50%) translateX(50%); width: 40px;}
   .banner_play_btn:hover, .banner_stop_btn:hover {color: var(--color-mint);}
+  .banner_play_btn:focus, .banner_stop_btn:focus {color: var(--color-mint);}
   .paginaition {bottom: 4%; left: 50%; transform: translateY(-50% 50%); width: 100%;}
   .paginaition li {width: calc(100%/12); height: 2px; margin: 0px 5px; border-radius: 2px; background: var(--color-grey);}
   .paginaition li.active {background: var(--color-grey);}
