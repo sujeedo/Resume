@@ -40,7 +40,7 @@ String.prototype.toKorChars = function () {
 // 타이핑 할 텍스트를 지정합니다.
 let text1  = '"안녕하세요.';
 let text2  = '웹 퍼블리셔 김경미입니다."';
-let typeing1 = [], typeing2 = [], typeing3 = [];
+let typeing1 = [], typeing2 = [];
 text1 = text1.split(''); // ['안'.'녕','하','세','요','.']; 한글자씩 잘라줍니다.
 text2 = text2.split(''); 
 
@@ -67,7 +67,6 @@ let imax2 = typeing2.length; // 14개
 // setInterval 함수를 이용해 반복적으로 출력합니다.
 let inter = setInterval(typingAction1, 150);
 let inter2;
-
 
 function typingAction1() {
   // 텍스트가 들어있는 컨테이너에 깜빡이는 키보드 커서를 추가합니다.
