@@ -100,7 +100,7 @@ section {width: 100%; margin: var(--base-15);}
 /* Common Scrollbar */
 body::-webkit-scrollbar {width: 12px;}
 body::-webkit-scrollbar-track {background: var(--color-white);}
-body::-webkit-scrollbar-thumb {background-color: var(--color-mint);border-radius: 20px;border: 3px solid var(--color-white);}
+body::-webkit-scrollbar-thumb {background-color: var(--color-light-grey);border-radius: 20px;border: 3px solid var(--color-white);}
 
 /* Common Logo */
 .logo {font-size: var(--size-large); font-weight: normal; font-family: 'NEXONFootballGothicBA1';}
