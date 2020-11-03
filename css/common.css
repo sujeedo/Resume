@@ -142,8 +142,8 @@ header p {margin-top: var(--size-small);}
 
 /* Commom Footer */
 footer {position: relative; width: 100%;}
-footer::after {display: block; content: ""; position: absolute; top: 0; width: 100%; height: calc(var(--size-large)*4); border-top-left-radius: 50%; border-top-right-radius: 50%; background: var(--color-dark-white); z-index: -1;}
-footer::before {display: block; content: ""; position: absolute; bottom: 0; width: 100%; height: calc(100% - (var(--size-large)*4)); background: var(--color-dark-white); z-index: -1;}
+footer::after {display: block; content: ""; position: absolute; top: 0%; width: 100%; height: calc(var(--size-large)*4); border-top-left-radius: 50%; border-top-right-radius: 50%; background: var(--color-dark-white); z-index: -1;}
+footer::before {display: block; content: ""; position: absolute; bottom: 0%; width: 100%; height: calc(100% - (var(--size-large)*4)); background: var(--color-dark-white); z-index: -1;}
 .notification {padding: var(--size-medium) 0 var(--size-medium) 0;}
 .notification .logo {display: inline-block; width: auto;}
 .notification .logo .favicon {display: inline-block; width: var(--size-medium); height: var(--size-medium); background: url(../img/favicon.png) center / contain no-repeat;}
@@ -195,6 +195,9 @@ footer::before {display: block; content: ""; position: absolute; bottom: 0; widt
     --size-micro: 8px;
  }
  footer {overflow: hidden;}
- footer::after {height: calc(var(--size-large)*15);}
+ footer::after {top: 100%; height: calc(var(--size-large)*15);}
  footer::before {display: none}
+ footer .width_1200_box {transform: translateY(100%);}
+ footer.visible::after {top: 0%; transition: .3s ease-out;}
+ footer.visible .width_1200_box {transform: translateY(0%); transition: .3s ease-out;}
 }
