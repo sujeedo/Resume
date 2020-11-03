@@ -116,6 +116,20 @@ function typingAction2() {
       j = 0;
     }
   } else {
-    clearInterval(inter);
+    clearInterval(inter2);
+    text = '';
+    i = 0;
+    j = 0;
+    setTimeout(function () {
+      textBox2.classList.remove('cursor');
+      setTimeout(function () {
+        textBox1.classList.add('cursor');
+        textBox1.innerText = '';
+        textBox2.innerText = '';
+        setTimeout(function () {
+          inter = setInterval(typingAction1, 150);
+        }, 700);
+      }, 600);
+    }, 700);
   }
 }
