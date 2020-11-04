@@ -30,6 +30,25 @@ function vislbleFooter() {
 }
 window.addEventListener('scroll', throttle(vislbleFooter, 300));
 
+/* 탑 버튼 표시 애니메이션 */
+const topBtn = document.querySelector('.arrow_top');
+const firstSection = document.querySelector('[data-section-index="1"]');
+let firstSectionHeight = firstSection.clientHeight;
+document.addEventListener('scroll', function(){
+  if(window.scrollY > firstSectionHeight / 2) {
+    topBtn.classList.add('visible');
+    topBtn.classList.remove('hidden');
+  } else {
+    topBtn.classList.remove('visible');
+    topBtn.classList.add('hidden');
+  }
+});
+
+/* 탑버튼을 클릭시 최상단으로 부드럽게 스크롤링 */
+topBtn.addEventListener('click',() => {
+  scrollIntoView('[data-section-index="1"]');
+});
+
 /* 함수를 간격을 두고 호출하는 함수 */
 function throttle(fn, delay) {
   let timer
@@ -37,8 +56,14 @@ function throttle(fn, delay) {
       if (!timer){
           timer = setTimeout(() => {
               timer = null
-              fn.apply(this, arguments)
+              fn.apply(this, arguments);
           }, delay)
       }
   }
+}
+
+/* 부드러운 스크롤링 함수 */
+function scrollIntoView(selecter) {
+  const scrollTo = document.querySelector(selecter);
+  scrollTo.scrollIntoView({behavior: 'smooth', block: 'center'});
 }
