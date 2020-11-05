@@ -39,9 +39,9 @@
 .contact form .btn::before {display: none;}
 
 /* Contact Sprite */
-.sprite_flower {display: inline-block; position: absolute; top: -20px; right: -50px;  width: calc(600px/10);height: calc(120px/2); background: url(../img/contact_sprite.png); transform: scale(0.5); animation: flower_x 1s steps(10) infinite, flower_y 2s steps(2) infinite;}
-@keyframes flower_x {from {background-position-x: 0px;}to {background-position-x: -600px;}}
-@keyframes flower_y {from {background-position-y: 0px;}to {background-position-y: -120px;}}
+.sprite_flower {display: inline-block; position: absolute; top: -20px; right: -50px;  width: calc(600px/10); height: calc(120px/2); background: url(../img/contact_sprite.png); transform: scale(0.5); animation: flower_x 1s steps(10) infinite, flower_y 2s steps(2) infinite;}
+@keyframes flower_x {from {background-position-x: 0px;} to {background-position-x: -600px;}}
+@keyframes flower_y {from {background-position-y: 0px;} to {background-position-y: -120px;}}
 
 /* Contact Footer */
 footer .bg {background: var(--color-white);}
