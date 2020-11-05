@@ -7,10 +7,11 @@
 
 /* Contact Container*/
 .whole_container {background: url(../img/contact_bg.jpg) top / cover no-repeat; background-attachment: fixed; z-index: -1;}
+.png_bg {width: 100%; height: 100%; display: flex; justify-content: center; background: url(../img/contact_bg2.png) center / cover no-repeat;}
 
 /* Contact Section */
-.contact {display: flex; flex-direction: column; justify-content: center; align-items: center; max-width: 600px; width: 100%; height: auto; margin: var(--size-medium) 0; padding: var(--padding-mobile);}
-.contact .section_title {color: var(--color-mint); margin-bottom: 10px; font-size: var(--size-Xlarge); font-family: 'UhBeemysen'; font-weight: normal;}
+.contact {display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; max-width: 600px; width: 100%; height: auto; margin: var(--size-medium) 0; padding: var(--padding-mobile);}
+.contact .section_title {position: relative; color: var(--color-mint); margin-bottom: 10px; font-size: var(--size-Xlarge); font-family: 'UhBeemysen'; font-weight: normal;}
 /*  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); */
 
 /* Contact Form */
@@ -29,6 +30,11 @@
 .contact_form input:focus+label, .contact_form textarea:focus+label {color: var(--color-powder-orange);}
 .contact form .btn {height: var(--size-Xlarge); font-size: var(--size-regular); border: none; background: var(--color-white); box-shadow: 0px 2px 2px rgba(175, 175, 175, 0.466); color: var(--color-mint);}
 .contact form .btn::before {display: none;}
+
+/* Contact Sprite */
+.sprite_flower {display: inline-block; position: absolute; top: -20px; right: -50px;  width: calc(600px/10);height: calc(120px/2); background: url(../img/contact_sprite.png); transform: scale(0.5); animation: flower_x 1s steps(10) infinite, flower_y 2s steps(2) infinite;}
+@keyframes flower_x {from {background-position-x: 0px;}to {background-position-x: -600px;}}
+@keyframes flower_y {from {background-position-y: 0px;}to {background-position-y: -120px;}}
 
 /* Contact Footer */
 footer .bg {background: var(--color-white);}
@@ -49,5 +55,6 @@ footer .bg {background: var(--color-white);}
   .contact .section_title {margin-top: 140px; margin-bottom: 0px;}
   .contact .section_description {margin: 30px 0;}
   .contact_form textarea {width: calc(100% - 45px);}
+  .sprite_flower {top: -18px; right: -55px; transform: scale(0.7);}
   footer .bg, footer .width_1200_box {margin-top: 130px; transform: translateY(0%);}
 }

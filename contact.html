@@ -49,47 +49,50 @@
       </ul>
     </nav>
     <!-- nav End -->
-    <!-- Contact Start -->
-    <section class="contact">
-      <h2 class="section_title">CONTACT ME</h2>
-      <p class="section_description">전체 항목 작성을 원하지 않을시, 메세지 항목만 작성하셔도 메일을 보내실 수 있습니다.</p>
-      <form class="contact_form gform" method="POST" action="https://script.google.com/macros/s/AKfycbxYFypDC32yvhIcXx4HCjkI5uOzNQe99LQn53TYVxvL78KhYow/exec">
-        <fieldset>
-          <legend>선택 입력란</legend>
-          <div class="info_input">
-            <div class="input_box">
-              <input type="text" id="company" name="company" placeholder="회사명" autocomplete="off">
-              <label for="company"><span class="hidden_text">회사명</span><i class="fas fa-building"></i></label>
+    <div class="png_bg">
+      <!-- Contact Start -->
+      <section class="contact">
+        <h2 class="section_title">CONTACT ME<span class="sprite_flower"></span></h2>
+        <p class="section_description">전체 항목 작성을 원하지 않을시, 메세지 항목만 작성하셔도 메일을 보내실 수 있습니다.</p>
+        <form class="contact_form gform" method="POST"
+          action="https://script.google.com/macros/s/AKfycbxYFypDC32yvhIcXx4HCjkI5uOzNQe99LQn53TYVxvL78KhYow/exec">
+          <fieldset>
+            <legend>선택 입력란</legend>
+            <div class="info_input">
+              <div class="input_box">
+                <input type="text" id="company" name="company" placeholder="회사명" autocomplete="off">
+                <label for="company"><span class="hidden_text">회사명</span><i class="fas fa-building"></i></label>
+              </div>
+              <div class="input_box">
+                <input type="text" id="manager" name="manager" placeholder="담당자명" autocomplete="off">
+                <label for="manager"><span class="hidden_text">담당자명</span><i class="fas fa-user-tie"></i></label>
+              </div>
+              <div class="input_box">
+                <input type="tel" id="telephone" name="telephone" placeholder="연락처" autocomplete="off">
+                <label for="telephone"><span class="hidden_text">연락처</span><i class="fas fa-phone-alt"></i></label>
+              </div>
+              <div class="input_box">
+                <input type="email"" id=" email" name="email" placeholder="이메일" autocomplete="off">
+                <label for="email"><span class="hidden_text">이메일</span><i class="fas fa-envelope"></i></label>
+              </div>
             </div>
-            <div class="input_box">
-              <input type="text" id="manager" name="manager" placeholder="담당자명" autocomplete="off">
-              <label for="manager"><span class="hidden_text">담당자명</span><i class="fas fa-user-tie"></i></label>
+          </fieldset>
+          <fieldset>
+            <legend>필수 입력란</legend>
+            <div class="message_input">
+              <textarea id="message" name="message" placeholder="원하는 메세지를 적어주세요." autocomplete="off" required></textarea>
+              <label for="message"><span class="hidden_text">문의내용</span><i class="fas fa-comment-dots"></i></label>
             </div>
-            <div class="input_box">
-              <input type="tel" id="telephone" name="telephone" placeholder="연락처" autocomplete="off">
-              <label for="telephone"><span class="hidden_text">연락처</span><i class="fas fa-phone-alt"></i></label>
-            </div>
-            <div class="input_box">
-              <input type="email"" id=" email" name="email" placeholder="이메일" autocomplete="off">
-              <label for="email"><span class="hidden_text">이메일</span><i class="fas fa-envelope"></i></label>
-            </div>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>필수 입력란</legend>
-          <div class="message_input">
-            <textarea id="message" name="message" placeholder="원하는 메세지를 적어주세요." autocomplete="off" required></textarea>
-            <label for="message"><span class="hidden_text">문의내용</span><i class="fas fa-comment-dots"></i></label>
-          </div>
-        </fieldset>
-        <button class="btn">
-          SEND <i class="fas fa-paper-plane"></i>
-          <span class="btn_bg"></span>
-          <span class="btn_text" aria-hidden="true">SEND&nbsp<i class="fas fa-paper-plane"></i></span>
-        </button>
-      </form>
-    </section>
-    <!-- Contact End -->
+          </fieldset>
+          <button class="btn">
+            SEND <i class="fas fa-paper-plane"></i>
+            <span class="btn_bg"></span>
+            <span class="btn_text" aria-hidden="true">SEND&nbsp<i class="fas fa-paper-plane"></i></span>
+          </button>
+        </form>
+      </section>
+      <!-- Contact End -->
+    </div>
     <!-- Footer Start -->
     <footer>
       <div class="bg">
