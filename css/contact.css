@@ -11,15 +11,22 @@
 
 /* Contact Section */
 .contact {display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; max-width: 600px; width: 100%; height: auto; margin: var(--size-medium) 0; padding: var(--padding-mobile);}
-.contact .section_title {position: relative; color: var(--color-mint); margin-bottom: 10px; font-size: var(--size-Xlarge); font-family: 'UhBeemysen'; font-weight: normal;}
+.contact .section_title {position: relative; color: var(--color-mint); margin-bottom: 10px; font-size: var(--size-Xlarge); font-family: 'UhBeemysen'; font-weight: normal; transform: translateY(50px); opacity: 0; animation: visibletitle .5s linear; animation-delay: .3s; animation-fill-mode: both;}
 /*  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); */
+.contact .section_description {transform: translateY(50px); opacity: 0; animation: visibletitle .5s linear; animation-delay: .6s; animation-fill-mode: both;}
+@keyframes visibletitle {from {transform: translateY(50px); opacity: 0;} to {transform: translateY(0px); opacity: 1;}}
+
 
 /* Contact Form */
 .contact form {display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; width: 100%;}
 .contact form fieldset {width: 100%;}
 .contact form .input_box, .contact form .message_input {display: flex; justify-content: center; align-items: center; margin-bottom: var(--base-15); width: 100%; border-radius: 10px; background: var(--color-white); box-shadow: 0px 2px 2px rgba(175, 175, 175, 0.466);}
 .contact form .input_box:focus-within, .contact form .message_input:focus-within {outline: auto  2px var(--color-powder-orange);}
-.contact form .message_input {max-width: 600px; height: 202px;}
+.contact form .input_box:nth-child(1) {transform: translateY(50px); opacity: 0; animation: visibletitle .5s linear; animation-delay: .9s; animation-fill-mode: both;}
+.contact form .input_box:nth-child(2) {transform: translateY(50px); opacity: 0; animation: visibletitle .5s linear; animation-delay: 1.2s; animation-fill-mode: both;}
+.contact form .input_box:nth-child(3) {transform: translateY(50px); opacity: 0; animation: visibletitle .5s linear; animation-delay: 1.5s; animation-fill-mode: both;}
+.contact form .input_box:nth-child(4) {transform: translateY(50px); opacity: 0; animation: visibletitle .5s linear; animation-delay: 1.8s; animation-fill-mode: both;}
+.contact form .message_input {max-width: 600px; height: 202px; transform: translateY(50px); opacity: 0; animation: visibletitle .5s linear; animation-delay: 2.1s; animation-fill-mode: both;}
 .contact_form input, .contact_form textarea {order: 2; padding: var(--size-regular) var(--size-regular) var(--size-regular) 0; font-family: 'paybooc-Medium'; text-align: left; border: none; border-radius: 10px;}
 .contact_form input {width: 100%;}
 .contact_form textarea {width: calc(100% - 40px); height: 200px;}
@@ -28,7 +35,7 @@
 .contact_form input::placeholder, .contact_form textarea::placeholder {color: var(--color-light-grey);}
 .contact_form input:focus, .contact_form textarea:focus {outline: none;}
 .contact_form input:focus+label, .contact_form textarea:focus+label {color: var(--color-powder-orange);}
-.contact form .btn {height: var(--size-Xlarge); font-size: var(--size-regular); border: none; background: var(--color-white); box-shadow: 0px 2px 2px rgba(175, 175, 175, 0.466); color: var(--color-mint);}
+.contact form .btn {height: var(--size-Xlarge); font-size: var(--size-regular); border: none; background: var(--color-white); box-shadow: 0px 2px 2px rgba(175, 175, 175, 0.466); color: var(--color-mint); transform: translateY(50px); opacity: 0; animation: visibletitle .5s linear; animation-delay: 2.4s; animation-fill-mode: both;}
 .contact form .btn::before {display: none;}
 
 /* Contact Sprite */
