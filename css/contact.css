@@ -23,8 +23,10 @@
 .contact_form textarea {order: 2; height: 200px;}
 .contact_form label {font-size: var(--size-big-regular); color: var(--color-mint); margin: var(--size-regular); transform: translateY(1px);}
 .contact_form input::placeholder, .contact_form textarea::placeholder {color: var(--color-light-grey);}
-.contact_form input:focus+label, .contact_form textarea:focus+label {color: var(--color-powder-red);}
+.contact_form input:focus, .contact_form textarea:focus {outline: none;}
+.contact_form input:focus+label, .contact_form textarea:focus+label {color: var(--color-powder-orange);}
 .contact form .btn {height: var(--size-Xlarge); font-size: var(--size-regular); border: none; background: var(--color-white); box-shadow: 0px 2px 2px rgba(175, 175, 175, 0.466); color: var(--color-mint);}
+.contact form .btn::before {display: none;}
 
 /* Contact Footer */
 footer .bg {background: var(--color-white);}
