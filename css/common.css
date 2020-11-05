@@ -150,6 +150,8 @@ header p {margin-top: var(--size-small);}
 .gnb ul li:nth-of-type(5):hover a::after {display: block; content: "Blog";}
 .gnb ul li:nth-of-type(6):hover a::after {display: block; content: "Resume";}
 .gnb ul li:hover a::before {display: block;}
+.gnb ul li a span.active {display: inline-block; position: absolute; bottom: 0px; width: 100%; height: 3px; padding: 0; background: var(--color-white);}
+
 
 /* Commom Footer */
 footer {width: 100%;}
@@ -196,6 +198,7 @@ footer::before {display: block; content: ""; position: absolute; bottom: 0%; wid
   .gnb ul li:nth-of-type(6):hover a {background: var(--color-white); color: var(--color-mint);}
   .gnb ul li:nth-of-type(6):active a {transform: scale(0.96);}
   .gnb ul li:hover a::before {display: none;}
+  .gnb ul li a span.active {bottom: -5px;}
   .btn {width: 160px;}
   .contact_list {flex-direction: row;}
 }
