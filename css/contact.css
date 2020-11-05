@@ -17,11 +17,13 @@
 .contact form {display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; width: 100%;}
 .contact form fieldset {width: 100%;}
 .contact form .input_box, .contact form .message_input {display: flex; justify-content: center; align-items: center; margin-bottom: var(--base-15); width: 100%; border-radius: 10px; background: var(--color-white); box-shadow: 0px 2px 2px rgba(175, 175, 175, 0.466);}
-.contact_form input, .contact_form textarea {width: 100%; padding: var(--size-regular) var(--size-regular) var(--size-regular) 0; font-family: 'paybooc-Medium'; text-align: left; border: none; border-radius: 10px;}
-.contact form .message_input {align-items: flex-start;}
-.contact_form input {order: 2;}
-.contact_form textarea {order: 2; height: 200px;}
+.contact form .input_box:focus-within, .contact form .message_input:focus-within {outline: auto  2px var(--color-powder-orange);}
+.contact form .message_input {max-width: 600px; height: 202px;}
+.contact_form input, .contact_form textarea {order: 2; padding: var(--size-regular) var(--size-regular) var(--size-regular) 0; font-family: 'paybooc-Medium'; text-align: left; border: none; border-radius: 10px;}
+.contact_form input {width: 100%;}
+.contact_form textarea {width: calc(100% - 40px); height: 200px;}
 .contact_form label {font-size: var(--size-big-regular); color: var(--color-mint); margin: var(--size-regular); transform: translateY(1px);}
+.contact form .message_input label {align-self: flex-start;}
 .contact_form input::placeholder, .contact_form textarea::placeholder {color: var(--color-light-grey);}
 .contact_form input:focus, .contact_form textarea:focus {outline: none;}
 .contact_form input:focus+label, .contact_form textarea:focus+label {color: var(--color-powder-orange);}
@@ -46,5 +48,6 @@ footer .bg {background: var(--color-white);}
   .contact {height: 65vh;}
   .contact .section_title {margin-top: 140px; margin-bottom: 0px;}
   .contact .section_description {margin: 30px 0;}
+  .contact_form textarea {width: calc(100% - 45px);}
   footer .bg, footer .width_1200_box {margin-top: 130px; transform: translateY(0%);}
 }
